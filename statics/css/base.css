@@ -79,7 +79,7 @@ body select {
   width: 120px;
   text-align: center;
 }
-.topContainer .topBox .topNavBox .fnavUl .fNavUnit a:hover {
+.topContainer .topBox .topNavBox .fnavUl .fNavUnit:hover {
   background-color: #a3c6e0;
 }
 .topContainer .topBox .topNavBox .fnavUl .fNavUnit:hover .snavUl {
@@ -136,4 +136,19 @@ body select {
   text-indent: 16px;
   border-left: 5px solid #666;
   margin: 10px 0;
+}
+.mainContainer .mainBox .mainBtn {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  background-color: #66a1cb;
+  color: #fff;
+  border-radius: 5px;
+}
+.mainContainer .mainBox .mainBtn a:active {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
 }

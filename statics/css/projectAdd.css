@@ -28,20 +28,8 @@
   height: 30px;
   line-height: 30px;
 }
-.subBtn {
-  display: inline-block;
-  width: 60px;
-  text-align: center;
-  height: 30px;
-  line-height: 30px;
-  background-color: #66a1cb;
-  color: #fff;
-  border-radius: 5px;
-}
-.subBtn a:active {
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  -moz-opacity: 0.6;
+.mainTable .mainItem .mainContent .errorMsg {
+  color: #f00;
 }
 .addBtn {
   float: right;

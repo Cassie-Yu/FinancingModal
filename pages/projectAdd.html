@@ -20,135 +20,154 @@
     <div class="mainContainer">
         <div class="mainBox">
             <div class="mainTitle">新增项目</div>
-            <span class="subBtn addBtn">
+            <span class="mainBtn addBtn">
                 <a href="javascript:void(0);">提交</a>
             </span>
-            <table class="mainTable">
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">项目编号：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">项目名称：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">项目负责人：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">项目融资负责人：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">项目提交时间：</span>
-                        <input class="mainTxt datePicker" type="text" readonly>
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">项目地点：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">项目类型：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">项目规模：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">开发方式：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">租赁类型：</span>
-                        <select class="mainTxt" name="leaseType">
-                            <option value="null"></option>
-                            <option value="emc">EMC</option>
-                            <option value="ground">土地租赁</option>
-                            <option value="roof">屋顶租赁</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">项目评审编号：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">备案状态：</span>
-                        <select class="mainTxt" name="recordStatus">
-                            <option value="null"></option>
-                            <option value="recordYes">已备案</option>
-                            <option value="recordNo">未备案</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">土地类型/屋顶类型：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">土地面积：</span>
-                        <input class="mainTxt" type="text">
-                        <span class="mainUnits">m²</span>
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">土地租金：</span>
-                        <input class="mainTxt" type="text">
-                        <span class="mainUnits">万元</span>
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">电价：</span>
-                        <input class="mainTxt" type="text">
-                        <span class="mainUnits">元/kwh</span>
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">土地状况：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">业主公司：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent">
-                        <span class="mainTips">合作方公司：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                    <td class="mainContent">
-                        <span class="mainTips">用电方公司：</span>
-                        <input class="mainTxt" type="text">
-                    </td>
-                </tr>                
-                <tr class="mainItem">
-                    <td class="mainContent" colspan="2">
-                        <span class="mainTips">项目需求：</span>
-                        <input class="mainTxt mainLTxt" type="text">
-                    </td>
-                </tr>
-                <tr class="mainItem">
-                    <td class="mainContent" colspan="2">
-                        <span class="mainTips">其他说明：</span>
-                        <input class="mainTxt mainLTxt" type="text">
-                    </td>
-                </tr>
-            </table>
+            <form action="javascript:void(0)" id="addForm">
+                <table class="mainTable">
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">项目编号：</span>
+                            <input class="mainTxt" type="text" name="proNo">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">项目名称：</span>
+                            <input class="mainTxt" type="text" name="proName">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">项目负责人：</span>
+                            <input class="mainTxt" type="text" name="proMan">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">项目融资负责人：</span>
+                            <input class="mainTxt" type="text" name="proRman">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">项目提交时间：</span>
+                            <input class="mainTxt datePicker" type="text" readonly>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">项目地点：</span>
+                            <input class="mainTxt" type="text" name="proAd">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">项目类型：</span>
+                            <input class="mainTxt" type="text" name="proType">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">项目规模：</span>
+                            <input class="mainTxt" type="text" name="proScale">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">开发方式：</span>
+                            <input class="mainTxt" type="text" name="proMethod">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">租赁类型：</span>
+                            <select class="mainTxt" name="leaseType">
+                                <option value="emc">EMC</option>
+                                <option value="ground">土地租赁</option>
+                                <option value="roof">屋顶租赁</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">项目评审编号：</span>
+                            <input class="mainTxt" type="text" name="proPno">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">备案状态：</span>
+                            <select class="mainTxt" name="recordStatus">
+                                <option value="recordYes">已备案</option>
+                                <option value="recordNo">未备案</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">土地类型/屋顶类型：</span>
+                            <input class="mainTxt" type="text" name="proRoof">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">土地面积：</span>
+                            <input class="mainTxt" type="text" name="proArea">
+                            <span class="mainUnits">m²</span>
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">土地租金：</span>
+                            <input class="mainTxt" type="text" name="proRental">
+                            <span class="mainUnits">万元</span>
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">电价：</span>
+                            <input class="mainTxt" type="text" name="proEprice">
+                            <span class="mainUnits">元/kwh</span>
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">土地状况：</span>
+                            <input class="mainTxt" type="text" name="proAstate">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">业主公司：</span>
+                            <input class="mainTxt" type="text" name="proOwner">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">合作方公司：</span>
+                            <input class="mainTxt" type="text" name="proParter">
+                            <span class="errorMsg"></span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">用电方公司：</span>
+                            <input class="mainTxt" type="text" name="proUser">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>                
+                    <tr class="mainItem">
+                        <td class="mainContent" colspan="2">
+                            <span class="mainTips">项目需求：</span>
+                            <input class="mainTxt mainLTxt" type="text" name="proNeed">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent" colspan="2">
+                            <span class="mainTips">其他说明：</span>
+                            <input class="mainTxt mainLTxt" type="text" name="proOther">
+                            <span class="errorMsg"></span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </div>
     </div>
     
@@ -159,6 +178,8 @@
     <!--    时间选择器css库文件引入-->
     <script src="../statics/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <script src="../statics/libs/bootstrap-datepicker/bootstrap-datepicker-zh.js"></script>
+    <!--    表单验证插件-->
+    <script src="../statics/libs/validate/jquery.validate.min.js"></script>
     <!--    页面基本js文件引入-->
     <script src="../statics/js/base.js"></script>
     <!--    页面单独js文件引入-->
