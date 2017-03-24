@@ -16,3 +16,6 @@
   line-height: 40px;
   text-align: center;
 }
+.projectList .editBtn {
+  margin: 0 4px;
+}
