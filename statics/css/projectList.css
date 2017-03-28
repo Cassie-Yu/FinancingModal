@@ -19,3 +19,12 @@
 .projectList .editBtn {
   margin: 0 4px;
 }
+.mainSearch {
+  width: 280px;
+  margin: 10px auto;
+}
+.mainSearch input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}

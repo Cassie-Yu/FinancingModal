@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../statics/imgs/user.jpg'>
+    <!--    bootstrap css文件库引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap/bootstrap.min.css">
+    <!--    bootstrap滑动条css文件引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap-slider/bootstrap-slider.min.css">
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../statics/css/base.css">
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../statics/css/estimateCapacity.css">
+</head>
+<body>
+    <div class="topContainer"></div>
+    
+    <div class="mainContainer">
+        <div class="mainBox">
+            <div class="mainTitle">估算项目容量</div>
+            <div class="toolContainer">
+                <select name="roofStyle" id="roofStyle" class="roofStyle">
+                    <option value="colorRoof">彩钢瓦</option>
+                    <option value="flatRoof">平屋顶</option>
+                </select>
+                <form id="capacityForm" action="javascript:void(0);">
+                    <div class="toolBox">
+                        <div class="toolItem">
+                            <span class="toolTips">屋顶面积(m²)：</span>
+                            <input type="text" name="roofArea" class="toolTxt">
+                            <span class="errorMsg"></span>
+                        </div>
+                        <div class="toolItem">
+                            <span class="toolTips">可利用系数：</span>
+                            <input id="slider1" type="text"/>
+                            <span class="sliderNo" id="sliderNo1">0.3</span>
+                        </div>
+                    </div>
+                    <div class="toolBox hide">
+                        <div class="toolItem">
+                            <span class="toolTips">屋顶面积(m²)：</span>
+                            <input type="text" name="roofArea" class="toolTxt">
+                            <span class="errorMsg"></span>
+                        </div>
+                        <div class="toolItem">
+                            <span class="toolTips">可利用系数：</span>
+                            <input id="slider2" type="text"/>
+                            <span class="sliderNo" id="sliderNo2">0.6</span>
+                        </div>
+                        <div class="toolItem">
+                            <span class="toolTips">方阵倾角(°)：</span>
+                            <input type="text" name="dipAngle" class="toolTxt">
+                            <span class="errorMsg"></span>
+                        </div>
+                        <div class="toolItem">
+                            <span class="toolTips">当地维度(°)：</span>
+                            <input type="text" name="dimensionality" class="toolTxt">
+                            <span class="errorMsg"></span>
+                        </div>
+                    </div>
+                </form>
+                <div class="resultContainer">
+                    <div class="mainBtn formBtn">
+                        <a href="javascript:void(0);">计算</a>
+                    </div>
+                    <div class="resultBox">
+                        <span class="resultTip">项目容量(Kw)&nbsp;</span>
+                        <span class="resultNo">12345</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--    jQ库文件引入-->
+    <script src="../statics/libs/jquery/jquery.min.js"></script>
+    <!--    bootstrap js库文件引入-->
+    <script src="../statics/libs/bootstrap/bootstrap.min.js"></script>
+    <!--    bootstrap滑动条js文件引入-->
+    <script src="../statics/libs/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <!--    表单验证插件-->
+    <script src="../statics/libs/validate/jquery.validate.min.js"></script>
+    <!--    页面基本js文件引入-->
+    <script src="../statics/js/base.js"></script>
+    <!--    页面单独js文件引入-->
+    <script src="../statics/js/estimateCapacity.js"></script>
+</body>
+</html>

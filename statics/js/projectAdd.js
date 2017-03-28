@@ -25,7 +25,7 @@ projectAdd.subForm = function(){
     $(document).on('click','.addBtn',function(){
         $('#addForm').submit();
     })
-}
+};
 
 //新增项目表单验证
 projectAdd.formCheck = function(){

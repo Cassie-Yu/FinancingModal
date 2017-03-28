@@ -147,6 +147,8 @@ body select {
   background-color: #66a1cb;
   color: #fff;
   border-radius: 5px;
+}
+.mainContainer .mainBox .mainBtn a {
   padding: 0 12px;
 }
 .mainContainer .mainBox .mainBtn a:active {
