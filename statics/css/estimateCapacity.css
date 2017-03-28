@@ -43,11 +43,3 @@
 .toolContainer .toolBox .toolItem .errorMsg {
   color: #f00;
 }
-.toolContainer .resultContainer {
-  text-align: center;
-}
-.toolContainer .resultContainer .resultBox {
-  margin: 10px auto;
-  color: #f00;
-  font-weight: 600;
-}

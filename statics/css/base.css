@@ -156,3 +156,11 @@ body select {
   filter: alpha(opacity=60);
   -moz-opacity: 0.6;
 }
+.mainContainer .mainBox .resultContainer {
+  text-align: center;
+}
+.mainContainer .mainBox .resultContainer .resultBox {
+  margin: 10px auto;
+  color: #f00;
+  font-weight: 600;
+}

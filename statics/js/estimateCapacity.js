@@ -55,10 +55,13 @@ estimateCapacity.formVal = function(){
             var text = error.text();
             element.siblings('.errorMsg').html(text);
         },
+        submitHandler:function(){
+            console.log('表单提交！');
+        },
         success:function(element){
             element.text('');
         },
-         rules:{
+        rules:{
             roofArea:{
                 required:true,
                 lrunlv:true
@@ -89,4 +92,4 @@ estimateCapacity.formVal = function(){
 jQuery.validator.addMethod("lrunlv",function(value,element){ 
     var reg = new RegExp(/^(([1-9][0-9]*)|(([0]\.\d{1,2}|[1-9][0-9]*\.\d{1,2})))$/);
     return this.optional(element) || reg.test(value);         
-}, "必须为正数且保留两位小数");     
+}, "必须为正数且保留两位小数");

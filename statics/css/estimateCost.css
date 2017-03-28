@@ -30,6 +30,10 @@
   height: 33px;
   line-height: 33px;
 }
+.toolContainer table th .errorOn,
+.toolContainer table td .errorOn {
+  border: 1px solid #f00;
+}
 .toolContainer table th .elementType,
 .toolContainer table td .elementType {
   width: 100%;
