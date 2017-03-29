@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../statics/imgs/user.jpg'>
+    <!--    bootstrap css文件库引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap/bootstrap.min.css">
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../statics/css/base.css">
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../statics/css/FinacialAnalysis.css">
+</head>
+<body>
+    <div class="topContainer"></div>
+    
+    <div class="mainContainer">
+        <div class="mainBox">
+            <div class="mainBtn countBtn">
+                <a href="../pages/finacialResult.html">计算</a>
+            </div>
+            <div class="mainTitle">项目基本参数</div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">装机容量：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">kw</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">建设期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">标杆电价（含税）：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">元/kWh</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">标杆电价（不含税）：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">元/kWh</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">含政府补贴电价：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">元/kWh</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="itemTitle">政府补贴年限：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">政府补贴电价（含税）：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">元/kWh</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">政府补贴电价（不含税）：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">元/kWh</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">省内政府补贴电价（含税）：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">元/kWh</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">省内政府补贴电价（不含税）：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">元/kWh</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">标杆电价通货膨胀率：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">标杆电费第1年回收期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">标杆电费后24年后回收期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">补贴电费首年回收期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">补贴电费第二年回收期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">补贴电费第三年回收期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">补贴电费第四年后回收期：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">月</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">年发电设备利用时间：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">小时/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">首年发电量：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">元/kWh</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">线损：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">设备损坏：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">限电：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">首年上网电量：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">kWh</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">首年发电系数：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">首年上网电量：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">kWh</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!--        项目投资情况-->
+        <div class="mainBox">
+            <div class="mainTitle">项目投资情况</div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">单位系统投资：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">组件：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">监理：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">设计：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">建安：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">设备监造、保险：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">BOS设备：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">工程建设管理费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">工程静态投资：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">（其中）设备购置费：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">设备占静态投资的比重：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">建设期利息：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">工程动态投资：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">流动资金：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">流动资金比例：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">保证金产生的财务费用：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">项目总投资：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">单位投资额：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">资本金比例：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!--        项目财务参数-->
+        <div class="mainBox">
+            <div class="mainTitle">项目财务参数</div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">建设期贷款利率：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">长期贷款利率-前两年：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">长期贷款名义利率：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">长期贷款利率-后13年：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">贷款年限：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">短期和流动资金贷款利率：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">固定资产形成率：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">可抵扣固定资产进项税：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">形成固定资产：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">固定资产折旧年限：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">固定资产残值率：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">递延资产形成率：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">递延资产：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">递延资产摊销年限：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!--        成本费用参数-->
+        <div class="mainBox">
+            <div class="mainTitle">成本费用参数</div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">费用通胀率：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">城建和教育附加税：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">售电增值税：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">所得税：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">公积金：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+<!--        发电成本参数-->
+        <div class="mainBox">
+            <div class="mainTitle">发电成本参数</div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">首年发电成本：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">电厂人员编制：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">人</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">公司管理人员编制：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">人</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">电厂人员人均工资：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">管理人员人均工资：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">人工工资合计：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">%</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">社保比例（五险一金）：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">人均福利费用：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">人均劳保费用：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">送出线路维护及检修：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/公里·年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">送出线路距离：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">公里</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">电网技术监督：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">高低压配电设备定期检修：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">每年检修次数：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">次</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">生产、安全工具更换：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">备品材料：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">（其中）组件：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">（其中）逆变器：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">其他：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">组件清洗：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">每年清洗次数：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">次</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">外购动力费：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">设备保险：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">%</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">土地使用税：</span>
+                            <input class="itemText" type="text" readonly>
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tableBox">
+                <table class="mainItemContent" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <span class="itemTitle">业务招待费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">差旅费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">办公费用：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">交通费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">通讯费用：</span>
+                            <input class="itemText" type="text">万元/年
+                        </td>
+                        <td>
+                            <span class="itemTitle">培训费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="itemTitle">会议及咨询费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                        <td>
+                            <span class="itemTitle">宣传费：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span class="itemTitle">其他费用：</span>
+                            <input class="itemText" type="text">
+                            <span class="units">万元/年</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!--    jQ库文件引入-->
+    <script src="../statics/libs/jquery/jquery.min.js"></script>
+    <!--    页面基本js文件引入-->
+    <script src="../statics/js/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../statics/imgs/user.jpg'>
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../statics/css/base.css">
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../statics/css/finacialResult.css">
+</head>
+<body>
+    <div class="topContainer"></div>
+    
+    <div class="mainContainer">
+        <div class="mainBox">
+            <ul class="finacialSheetNav">
+                <li class="mainBtn sheetItem incomeSheet">
+                    <a href="javascript:void(0);">利润表（电站）</a>
+                </li>
+                <li class="mainBtn sheetItem balanceSheet">
+                    <a href="javascript:void(0);">资产负债表</a>
+                </li>
+                <li class="mainBtn sheetItem investmentSheet">
+                    <a href="javascript:void(0);">现金流量表（全投资）</a>
+                </li>
+                <li class="mainBtn sheetItem powerStationSheet">
+                    <a href="javascript:void(0);">现金流量表（电站）</a>
+                </li>
+                <li class="mainBtn sheetItem capitalSheet">
+                    <a href="javascript:void(0);">现金流量表（资本表）</a>
+                </li>
+                <li class="mainBtn sheetItem">
+                    <a href="../pages/bankLoanSheet.html">收益与现金流量测算</a>
+                </li>
+            </ul>
+            <div class="mainTitle">利润表（电站）</div>
+            <div class="sheetContainer"></div>
+        </div>
+    </div>
+    
+    <!--    jQ库文件引入-->
+    <script src="../statics/libs/jquery/jquery.min.js"></script>
+    <!--    页面基本js文件引入-->
+    <script src="../statics/js/base.js"></script>
+    <!--    页面单独js文件引入-->
+    <script src="../statics/js/sheet.js"></script>
+    <script src="../statics/js/finacialResult.js"></script>
+</body>
+</html>

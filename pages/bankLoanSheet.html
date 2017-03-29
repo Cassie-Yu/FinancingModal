@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../statics/imgs/user.jpg'>
+    <!--    bootstrap css文件库引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap/bootstrap.min.css">
+    <!--    时间选择器css文件引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../statics/css/base.css">
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../statics/css/finacialResult.css">
+    <link rel="stylesheet" href="../statics/css/bankLoanSheet.css">
+</head>
+<body>
+    <div class="topContainer"></div>
+    
+    <div class="mainContainer">
+        <div class="mainBox">
+            <div class="mainBtn bankLoanBtn">
+                <a href="javascript:void(0)">计算</a>
+            </div>
+            <div class="mainTitle">参数</div>
+            <div class="tableBox">
+                <table>
+                    <tr>
+                        <td>租赁融资额</td>
+                        <td><input type="text"></td>
+                        <td>租赁物价格</td>
+                        <td><input type="text"></td>
+                        <td>购货相关费用支付</td>
+                        <td><input type="text"></td>
+                        <td>购货相关税收支付</td>
+                        <td><input type="text"></td>
+                        <td>起租日</td>
+                        <td><input type="text" class="datePicker" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>租赁利率</td>
+                        <td>
+                            <input type="text"><span class="units">%</span>
+                        </td>
+                        <td>租赁期限（年）</td>
+                        <td><input type="text"></td>
+                        <td>年付租次数</td>
+                        <td><input type="text"></td>
+                        <td>租金支付方式</td>
+                        <td>
+                            <select>
+                                <option value="o"></option>
+                                <option value="pre">先付</option>
+                                <option value="next">后付</option>
+                            </select>
+                        </td>
+                        <td>每月付款日期</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>期末残值</td>
+                        <td><input type="text"></td>
+                        <td>残值计入本金</td>
+                        <td>
+                            <select>
+                                <option value="null"></option>
+                                <option value="yes">是</option>
+                                <option value="no">否</option>
+                            </select>
+                        </td>
+                        <td>贴现率</td>
+                        <td>
+                            <input type="text"><span class="units">%</span>
+                        </td>
+                        <td>保证金存款利率</td>
+                        <td>
+                            <input type="text"><span class="units">%</span>
+                        </td>
+                        <td>首期付租日</td>
+                        <td><input type="text" class="datePicker" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>保证金率</td>
+                        <td>
+                            <input type="text"><span class="units">%</span>
+                        </td>
+                        <td>保证金</td>
+                        <td><input type="text" readonly></td>
+                        <td>手续费率</td>
+                        <td><input type="text"></td>
+                        <td>手续费</td>
+                        <td><input type="text" readonly></td>
+                        <td>供应商折扣率</td>
+                        <td>
+                            <input type="text"><span class="units">%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>供应商折扣额</td>
+                        <td><input type="text" readonly></td>
+                        <td>管理费率</td>
+                        <td>
+                            <input type="text"><span class="units">%</span>
+                        </td>
+                        <td>管理费</td>
+                        <td><input type="text" readonly></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mainTitle">收益测算</div>
+            <div class="tableBox">
+                <table>
+                    <tr>
+                        <td>首期租金</td>
+                        <td><input type="text" readonly></td>
+                        <td>租金总额</td>
+                        <td><input type="text" readonly></td>
+                        <td>收回本金</td>
+                        <td><input type="text" readonly></td>
+                        <td>收回利息</td>
+                        <td><input type="text" readonly></td>
+                        <td>净融资额折现</td>
+                        <td><input type="text" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>净现值NPV</td>
+                        <td><input type="text" readonly></td>
+                        <td>现值收益率</td>
+                        <td><input type="text" readonly></td>
+                        <td>年化现值收益率</td>
+                        <td><input type="text" readonly></td>
+                        <td>项目IRR（年付分次不计复利）</td>
+                        <td><input type="text" readonly></td>
+                        <td>项目IRR（年付分次计算复利）</td>
+                        <td><input type="text" readonly></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mainTitle">现金流量</div>
+            <div class="sheetContainerA">
+                <div class="sheetBox">
+                    <div class="sheetInBox">
+                        <div class="sheetFixed">
+                            <div class="projectName">项目名称</div>
+                        </div>
+                        <div class="sheetRowTitle">
+                            <ul class="rowYearNo">
+                                <li class="yearNo">租赁相关流入</li>
+                                <li class="yearNo">利息</li>
+                                <li class="yearNo">收回本金</li>
+                                <li class="yearNo">尚未收回本金</li>
+                                <li class="yearNo">其他现金流入</li>
+                                <li class="yearNo">其他现金流出</li>
+                                <li class="yearNo">现金流入</li>
+                                <li class="yearNo">现金流出</li>
+                                <li class="yearNo">净现金流</li>
+                                <li class="yearNo">提前还本金额</li>
+                                <li class="yearNo">还本后重新算利息</li>
+                                <li class="yearNo">还本后利息计算期数</li>
+                                <li class="yearNo">租赁利率</li>
+                                <li class="yearNo">还款日期</li>
+                            </ul>
+                        </div>
+                        <div class="sheetLineTitle">
+                            <ul class="lineTitle">
+                                <li class="lineInTitle">起租日</li>
+                                <li class="lineInTitle">第1期</li>
+                                <li class="lineInTitle">第2期</li>
+                                <li class="lineInTitle">第3期</li>
+                                <li class="lineInTitle">第4期</li>
+                                <li class="lineInTitle">第5期</li>
+                                <li class="lineInTitle">第6期</li>
+                                <li class="lineInTitle">第7期</li>
+                                <li class="lineInTitle">第8期</li>
+                                <li class="lineInTitle">第9期</li>
+                                <li class="lineInTitle">第10期</li>
+                            </ul>
+                        </div>
+                        <div class="sheetContant">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--    jQ库文件引入-->
+    <script src="../statics/libs/jquery/jquery.min.js"></script>    
+    <!--    bootstrap js库文件引入-->
+    <script src="../statics/libs/bootstrap/bootstrap.min.js"></script>
+    <!--    时间选择器css库文件引入-->
+    <script src="../statics/libs/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../statics/libs/bootstrap-datepicker/bootstrap-datepicker-zh.js"></script>
+    <!--    页面基本js文件引入-->
+    <script src="../statics/js/base.js"></script>
+    <!--    页面单独js文件引入-->
+    <script src="../statics/js/sheet.js"></script>
+    <script src="../statics/js/bankLoanSheet.js"></script>
+</body>
+</html>
