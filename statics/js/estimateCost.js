@@ -1,12 +1,10 @@
 $(function(){
-    estimateCost.addTr();//表格的添加
-    estimateCost.formSub();//点击按钮提交表单
-    estimateCost.formVal();//表单验证相关
+    estimateCost.addTr();//表格的添加与删除
 });
 
 var estimateCost = new Object();
 
-//表格的添加
+//表格的添加与删除
 estimateCost.addTr = function(){
     $(document).on('click','.addTr',function(){
         var index = $(this).parents('.tableBox').attr('index');
@@ -27,66 +25,3 @@ estimateCost.addTr = function(){
         }
     })
 };
-
-//点击按钮提交表单
-estimateCost.formSub = function(){
-    $(document).on('click','.formBtn',function(){
-        $('#costForm').submit();
-    })
-};
-
-//表单验证相关
-estimateCost.formVal = function(){
-    $('#costForm').validate({
-        errorPlacement:function(error,element){
-            
-        },
-        submitHandler:function(){
-//            console.log('表单提交！');
-        },
-        success:function(element){
-            
-        },
-        rules:{
-            proName:{
-                required:true,
-                lrunlv:true
-            },
-            proNum:{
-                required:true,
-                lrunlv:true
-            },
-            eqPrice:{
-                required:true,
-                lrunlv:true
-            },
-            insPrice:{
-                required:true,
-                lrunlv:true
-            }
-        },
-        messages:{
-            proName:{
-                required:'',
-                lrunlv:''
-            },
-            proNum:{
-                required:'',
-                lrunlv:''
-            },
-            eqPrice:{
-                required:'',
-                lrunlv:''
-            },
-            insPrice:{
-                required:'',
-                lrunlv:''
-            }
-        }
-    })
-};
-
-jQuery.validator.addMethod("lrunlv",function(value,element){ 
-    var reg = new RegExp(/^(([1-9][0-9]*)|(([0]\.\d{1,2}|[1-9][0-9]*\.\d{1,2})))$/);
-    return this.optional(element) || reg.test(value);         
-}, "必须为正数且保留两位小数");

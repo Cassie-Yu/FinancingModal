@@ -19,218 +19,216 @@
         <div class="mainBox">
             <div class="mainTitle">估算项目造价</div>
             <div class="toolContainer">
-                <form id="costForm" action="javascript:void(0);">
-                    <div class="tableBox" index="0">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td style="width:50px;">序号</td>
-                                    <td style="width:180px;">建筑工程项目名</td>
-                                    <td style="width:160px;">类型</td>
-                                    <td style="width:50px;">数量</td>
-                                    <td style="width:140px;">设备购置费单价(元)</td>
-                                    <td style="width:110px;">安装费单价(元)</td>
-                                    <td style="width:140px;">设备购置费总价(元)</td>
-                                    <td style="width:110px;">安装费总价(元)</td>
-                                    <td style="width:100px;">操作</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <input name="proName" class="tableTxt" type="text" value="1">
-                                    </td>
-                                    <td>
-                                        <select name="elementType" class="elementType">
-                                            <option value="">光伏组件</option>
-                                            <option value="">光伏支架</option>
-                                            <option value="">光伏逆变器</option>
-                                            <option value="">汇流箱</option>
-                                            <option value="">配电箱/箱式变压器</option>
-                                            <option value="">并网设备</option>
-                                            <option value="">监控系统</option>
-                                            <option value="">电缆及辅材</option>
-                                            <option value="">防雷接地</option>
-                                            <option value="">其他工程</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <input name="proNum" class="tableTxt" type="text" value="1">
-                                    </td>
-                                    <td>
-                                        <input name="eqPrice" class="tableTxt" type="text" value="1">
-                                    </td>
-                                    <td>
-                                        <input name="insPrice" class="tableTxt" type="text" value="1">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <div class="mainBtn delBtn">
-                                            <a href="javascript:void(0);">删除</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="addTr">+</div>
-                    </div>
-                    <div class="tableBox" index="1">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td style="width:50px;">序号</td>
-                                    <td style="width:180px;">发电设备单元项目名</td>
-                                    <td style="width:160px;">类型</td>
-                                    <td style="width:50px;">数量</td>
-                                    <td style="width:140px;">设备购置费单价(元)</td>
-                                    <td style="width:110px;">安装费单价(元)</td>
-                                    <td style="width:140px;">设备购置费总价(元)</td>
-                                    <td style="width:110px;">安装费总价(元)</td>
-                                    <td style="width:100px;">操作</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <select name="elementType" class="elementType">
-                                            <option value="">光伏基础</option>
-                                            <option value="">其他设备基础</option>
-                                            <option value="">其他工程</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <div class="mainBtn delBtn">
-                                            <a href="javascript:void(0);">删除</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="addTr">+</div>
-                    </div>
-                    <div class="tableBox" index="2">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td style="width:50px;">序号</td>
-                                    <td style="width:180px;">设备电器部分项目名</td>
-                                    <td style="width:160px;">类型</td>
-                                    <td style="width:50px;">数量</td>
-                                    <td style="width:140px;">设备购置费单价(元)</td>
-                                    <td style="width:110px;">安装费单价(元)</td>
-                                    <td style="width:140px;">设备购置费总价(元)</td>
-                                    <td style="width:110px;">安装费总价(元)</td>
-                                    <td style="width:100px;">操作</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <select name="elementType" class="elementType">
-                                            <option value="">电气一次</option>
-                                            <option value="">电气二次</option>
-                                            <option value="">开闭站（其他系统）</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <div class="mainBtn delBtn">
-                                            <a href="javascript:void(0);">删除</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="addTr">+</div>
-                    </div>
-                    <div class="tableBox" index="3">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td style="width:50px;">序号</td>
-                                    <td style="width:150px;">其他费用</td>
-                                    <td style="width:200px;">类型</td>
-                                    <td style="width:90px;">数量</td>
-                                    <td style="width:200px;">单价（元）</td>
-                                    <td style="width:200px;">合价（元）</td>
-                                    <td style="width:150px;">操作</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <select name="elementType" class="elementType">
-                                            <option value="">项目建设管理费</option>
-                                            <option value="">勘察设计费</option>
-                                        </select>
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text">
-                                    </td>
-                                    <td>
-                                        <input class="tableTxt" type="text" readonly>
-                                    </td>
-                                    <td>
-                                        <div class="mainBtn delBtn">
-                                            <a href="javascript:void(0);">删除</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="addTr">+</div>
-                    </div>
-                </form>                    
+                <div class="tableBox" index="0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td style="width:50px;">序号</td>
+                                <td style="width:180px;">建筑工程项目名</td>
+                                <td style="width:160px;">类型</td>
+                                <td style="width:50px;">数量</td>
+                                <td style="width:140px;">设备购置费单价(元)</td>
+                                <td style="width:110px;">安装费单价(元)</td>
+                                <td style="width:140px;">设备购置费总价(元)</td>
+                                <td style="width:110px;">安装费总价(元)</td>
+                                <td style="width:100px;">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <input class="tableTxt" type="text" value="1">
+                                </td>
+                                <td>
+                                    <select name="elementType" class="elementType">
+                                        <option value="">光伏组件</option>
+                                        <option value="">光伏支架</option>
+                                        <option value="">光伏逆变器</option>
+                                        <option value="">汇流箱</option>
+                                        <option value="">配电箱/箱式变压器</option>
+                                        <option value="">并网设备</option>
+                                        <option value="">监控系统</option>
+                                        <option value="">电缆及辅材</option>
+                                        <option value="">防雷接地</option>
+                                        <option value="">其他工程</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" value="1">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" value="1">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" value="1">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <div class="mainBtn delBtn">
+                                        <a href="javascript:void(0);">删除</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="addTr">+</div>
+                </div>
+                <div class="tableBox" index="1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td style="width:50px;">序号</td>
+                                <td style="width:180px;">发电设备单元项目名</td>
+                                <td style="width:160px;">类型</td>
+                                <td style="width:50px;">数量</td>
+                                <td style="width:140px;">设备购置费单价(元)</td>
+                                <td style="width:110px;">安装费单价(元)</td>
+                                <td style="width:140px;">设备购置费总价(元)</td>
+                                <td style="width:110px;">安装费总价(元)</td>
+                                <td style="width:100px;">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <select name="elementType" class="elementType">
+                                        <option value="">光伏基础</option>
+                                        <option value="">其他设备基础</option>
+                                        <option value="">其他工程</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <div class="mainBtn delBtn">
+                                        <a href="javascript:void(0);">删除</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="addTr">+</div>
+                </div>
+                <div class="tableBox" index="2">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td style="width:50px;">序号</td>
+                                <td style="width:180px;">设备电器部分项目名</td>
+                                <td style="width:160px;">类型</td>
+                                <td style="width:50px;">数量</td>
+                                <td style="width:140px;">设备购置费单价(元)</td>
+                                <td style="width:110px;">安装费单价(元)</td>
+                                <td style="width:140px;">设备购置费总价(元)</td>
+                                <td style="width:110px;">安装费总价(元)</td>
+                                <td style="width:100px;">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <select name="elementType" class="elementType">
+                                        <option value="">电气一次</option>
+                                        <option value="">电气二次</option>
+                                        <option value="">开闭站（其他系统）</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <div class="mainBtn delBtn">
+                                        <a href="javascript:void(0);">删除</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="addTr">+</div>
+                </div>
+                <div class="tableBox" index="3">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td style="width:50px;">序号</td>
+                                <td style="width:150px;">其他费用</td>
+                                <td style="width:200px;">类型</td>
+                                <td style="width:90px;">数量</td>
+                                <td style="width:200px;">单价（元）</td>
+                                <td style="width:200px;">合价（元）</td>
+                                <td style="width:150px;">操作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <select name="elementType" class="elementType">
+                                        <option value="">项目建设管理费</option>
+                                        <option value="">勘察设计费</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text">
+                                </td>
+                                <td>
+                                    <input class="tableTxt" type="text" readonly>
+                                </td>
+                                <td>
+                                    <div class="mainBtn delBtn">
+                                        <a href="javascript:void(0);">删除</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="addTr">+</div>
+                </div>
             </div>
             <div class="hideContainer hide">
                 <table>
