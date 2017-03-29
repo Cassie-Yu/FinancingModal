@@ -2,8 +2,15 @@
 .mainBox {
   position: relative;
 }
-.mainBox .bankLoanBtn {
+.mainBox .bankLoanBtn,
+.mainBox .backBtn {
   position: absolute;
+}
+.mainBox .bankLoanBtn {
+  right: 100px;
+  top: 8px;
+}
+.mainBox .backBtn {
   right: 40px;
   top: 8px;
 }
