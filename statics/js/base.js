@@ -1,5 +1,5 @@
-$(function(){
-    base.addHtml('../pages/basePage/baseTop.html','.topContainer');
+$(function(){    
+    base.addHtml('http://127.0.0.1:63640/pages/basePage/baseTop.html','.topContainer');
 });
 
 var base = new Object();

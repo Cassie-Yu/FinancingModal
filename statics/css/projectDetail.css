@@ -14,6 +14,23 @@
   width: 530px;
   height: 305px;
 }
+.itemBox .proAddress {
+  width: 610px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+.itemBox .proAddress .addressTip {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
+.itemBox .proAddress .addressTxt {
+  display: inline-block;
+  width: 300px;
+  text-align: left;
+  font-weight: 600;
+}
 .mainTable {
   width: 90%;
   margin: 0 auto;

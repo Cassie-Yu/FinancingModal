@@ -80,21 +80,6 @@ projectAdd.formCheck = function(){
             proAstate:{
                 required:true
             },
-            proInvest:{
-                required:true
-            },
-            proCompany:{
-                required:true
-            },
-            proParter:{
-                required:true
-            },
-            proRoofowner:{
-                required:true
-            },
-            proUser:{
-                required:true
-            },
             proNeed:{
                 required:true
             },
@@ -143,21 +128,6 @@ projectAdd.formCheck = function(){
                 required:'必填'
             },
             proAstate:{
-                required:'必填'
-            },
-            proInvest:{
-                required:'必填'
-            },
-            proCompany:{
-                required:'必填'
-            },
-            proParter:{
-                required:'必填'
-            },
-            proRoofowner:{
-                required:'必填'
-            },
-            proUser:{
                 required:'必填'
             },
             proNeed:{

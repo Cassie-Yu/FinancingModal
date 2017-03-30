@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../../statics/imgs/user.jpg'>
+    <!--    bootstrap css文件库引入-->
+    <link rel="stylesheet" href="../../statics/libs/bootstrap/bootstrap.min.css">
+    <!--    webuploader css库文件引入-->
+    <link rel="stylesheet" href="../../statics/libs/webuploader/webuploader.css">
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../../statics/css/base.css">
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../../statics/css/projectAdd.css">
+    <link rel="stylesheet" href="../../statics/css/companyAdd.css">
+</head>
+<body>
+    <div class="topContainer"></div>
+    
+    <div class="mainContainer">
+        <div class="mainBox">
+            <div class="mainTitle">投资公司添加</div>
+            <div class="comNameBox">
+                <div class="inputBox">
+                    <span class="companyTip">请输入公司名称：</span>
+                    <input type="text" class="inputTxt">
+                    <span class="mainBtn searchBtn">
+                        <a href="javascript:void(0)";>查询</a>
+                    </span>
+                </div>
+            </div>
+            <ul class="comPreBox hide">
+                <li class="comItem">
+                    <span>江苏绿能宝融资租赁有限公司</span>
+                </li>
+                <li class="comItem">
+                    <span>绿能宝租赁资产交易平台（苏州）有限公司</span>
+                </li>
+                <li class="comItem">
+                    <span>绿能宝电子商务（苏州）有限公司</span>
+                </li>
+                <li class="comItem">
+                    <span>东莞市绿能宝汽车用品科技有限公司</span>
+                </li>
+                <li class="comItem">
+                    <span>湖南绿能宝环保科技开发有限公司</span>
+                </li>
+                <li class="comItem">
+                    <span>北京绿能宝环保科技有限公司</span>
+                </li>
+                <li class="comItem">
+                    <span>绿能宝电子商务（苏州）有限公司北京分公司</span>
+                </li>
+            </ul>
+            <div class="comAptitudeBox hide">
+                <table class="mainTable" cellspacing="0" cellpadding="0">
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">企业名称：</span>
+                            <span class="detailContant">绿能宝租赁资产交易平台（苏州）有限公司</span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">项目名称：</span>
+                            <span class="detailContant">广东珠海摩天宇 1.37MW</span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">企业注册时间：</span>
+                            <span class="detailContant">2015-07-24</span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">企业注册资金：</span>
+                            <span class="detailContant">10000万元人民币</span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">股东情况：</span>
+                            <span class="detailContant">有限责任公司</span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">企业地址：</span>
+                            <span class="detailContant">苏州高新区科技城科灵路78号</span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">企业法人：</span>
+                            <span class="detailContant">赵明华</span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">登记机关：</span>
+                            <span class="detailContant">苏州高新区（虎丘区）市场监督管理局</span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent">
+                            <span class="mainTips">统一社会信用代码：</span>    
+                            <span class="detailContant">91320505346408302W</span>
+                        </td>
+                        <td class="mainContent">
+                            <span class="mainTips">企业组织机构代码：</span>
+                            <span class="detailContant">91320505346408302W</span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent" colspan="2">
+                            <span class="mainTips">土地状况：</span>
+                            <span class="detailLContant">荒山荒坡</span>
+                        </td>
+                    </tr>
+                    <tr class="mainItem">
+                        <td class="mainContent" colspan="2">
+                            <span class="mainTips">其他说明：</span>
+                            <textarea class="textBox" name="comOperation" rows="2" readonly>租赁资产交易平台的设计、开发及咨询，新能源领域内的租赁资产和租赁产品的采购、销售，其他租赁创新产品的咨询、开发、设计、营销策划、信息发布服务，从事租赁设备、租赁资产等相关租赁产品的采购、销售，并为其提供现货电子交易平台和市场服务，并从事上述业务的咨询服务。（依法须经批准的项目，经相关部门批准后方可开展经营活动）</textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="upContainter">
+                <div class="upItem">
+                    <div class="upItemTitle">
+                        <span class="upTitleTxt">企业三证上传（营业执照正副本、组织机构代码证、税务登记证）</span>
+                        <span id="comThree" class="mainBtn choseBtn" >
+                            <a href="javascript:void(0);">选择文件</a>
+                        </span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">上传</a>
+                        </span>
+                    </div>
+                    <div id="comThreeList" class="filesContainer"></div>
+                </div>
+                <div class="upItem">
+                    <div class="upItemTitle">
+                        <span class="upTitleTxt">企业三年内的电费发票及清单扫描件上传</span>
+                        <span id="bill" class="mainBtn choseBtn">
+                            <a href="javascript:void(0);">选择文件</a>
+                        </span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">上传</a>
+                        </span>
+                    </div>
+                    <div id="billList" class="filesContainer"></div>
+                </div>
+<!--
+                <div class="upItem">
+                    <div class="upItemTitle">
+                        <span class="upTitleTxt">企业可对外的财务报表上传</span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">选择文件</a>
+                        </span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">上传</a>
+                        </span>
+                    </div>
+                    <div class="filesContainer"></div>
+                </div>
+                <div class="upItem">
+                    <div class="upItemTitle">
+                        <span class="upTitleTxt">企业近三年的业绩与销售额上传（如有）</span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">选择文件</a>
+                        </span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">上传</a>
+                        </span>
+                    </div>
+                    <div class="filesContainer"></div>
+                </div>
+                <div class="upItem">
+                    <div class="upItemTitle">
+                        <span class="upTitleTxt">企业建筑物房产证、土地证上传（房地产权证、国有土地使用权出让合同）</span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">选择文件</a>
+                        </span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">上传</a>
+                        </span>
+                    </div>
+                    <div class="filesContainer"></div>
+                </div>
+                <div class="upItem">
+                    <div class="upItemTitle">
+                        <span class="upTitleTxt">企业征信上传</span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">选择文件</a>
+                        </span>
+                        <span class="mainBtn upBtn">
+                            <a href="javascript:void(0);">上传</a>
+                        </span>
+                    </div>
+                    <div class="filesContainer"></div>
+                </div>
+-->
+            </div>
+        </div>
+    </div>
+
+    <!--    jQ库文件引入-->
+    <script src="../../statics/libs/jquery/jquery.min.js"></script>
+    <!--    webuploader js库文件引入-->
+    <script src="../../statics/libs/webuploader/webuploader.min.js"></script>
+    <!--    页面基本js文件引入-->
+    <script src="../../statics/js/base.js"></script>
+    <!--    页面单独js文件引入-->
+    <script src="../../statics/js/companyAdd.js"></script>
+</body>
+</html>
