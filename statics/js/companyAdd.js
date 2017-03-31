@@ -2,8 +2,12 @@ $(function(){
     companyAdd.choseItem();//公司选择动态效果
 //    companyAdd.uploadMethod1();
 //    companyAdd.uploadMethod2();
-    companyAdd.uploadMethod('#comThree','#comThreeList');
-    companyAdd.uploadMethod('#bill','#billList');
+    companyAdd.uploadMethod('#comThree','#comThreeList','#threeUpBtn');
+    companyAdd.uploadMethod('#bill','#billList','#billUpBtn');
+    companyAdd.uploadMethod('#state','#stateList','#stateUpBtn');
+    companyAdd.uploadMethod('#income','#incomeList','#incomeUpBtn');
+    companyAdd.uploadMethod('#house','#houseList','#houseUpBtn');
+    companyAdd.uploadMethod('#mail','#mailList','#mailUpBtn');
 });
 
 var companyAdd = new Object();
@@ -37,12 +41,13 @@ companyAdd.choseItem = function(){
 //             }
 //         }); 
         
-        $(this).parents('.comPreBox').siblings('.comAptitudeBox').removeClass('hide');
+        $(this).parents('.comPreBox').siblings('.comAptitudeBox').removeClass('hide');        $(this).parents('.comPreBox').siblings('.upContainter').removeClass('hide');
+        
     });
 };
 
 //文件上传效果
-companyAdd.uploadMethod = function(picker,filesList){    
+companyAdd.uploadMethod = function(picker,filesList,upBtn){    
     var uploader = WebUploader.create({    
            auto:false,// 选完文件后，是否自动上传。              
            swf:'../libs/webuploader/Uploader.swf',// swf文件路径
@@ -54,7 +59,7 @@ companyAdd.uploadMethod = function(picker,filesList){
     });
     
     uploader.on('fileQueued',function(file){
-        var $li = $('<span class="filesBox"><span id="'+file.id+'" class="fileItem">'+file.name+'</span><span class="delBtn">x</span></span>');//创建文件列表 
+        var $li = $('<span class="filesBox"><span id="'+file.id+'" class="fileItem">'+file.name+'</span></span>');//创建文件列表 
         $(filesList).append( $li );
     });
     
@@ -75,32 +80,17 @@ companyAdd.uploadMethod = function(picker,filesList){
             state = 'done';
         }
         if (state === 'uploading') {
-            $('.upBtn a').text('上传');
+            $('.upBtn a').text('等待上传');
         } else {
             $('.upBtn a').text('上传');
         }
     });
-
-    $(document).on('click','.upBtn',function(){
+    
+    $(upBtn).on('click',function(){
         if(state === 'uploading'){
             uploader.stop();
         }else{
             uploader.upload();
         }
-    });    
-   
-//    $(document).on('click','.upBtn',function(){
-//        var fileArr = new Array();
-//        var num =  $(this).parents('.upItemTitle').siblings('.filesContainer').children('.filesBox').length;
-//        for(var n=0;n<num;n++){
-//            var upFileId = $(this).parents('.upItemTitle').siblings('.filesContainer').children('.filesBox').eq(n).children('.fileItem').attr('id');
-//             uploader.upload(upFileId);
-//        };
-//    });
-    
-    $(document).on('click','.delBtn',function(){
-        $(this).parents('.filesBox').remove();
-        var delTarget = $(this).siblings('.fileItem').attr('id');
-        uploader.removeFile(uploader.getFile(delTarget));
     });
 };
