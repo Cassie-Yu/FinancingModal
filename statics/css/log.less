@@ -1,0 +1,190 @@
+.headerContainer{
+    width:100%;
+    min-width:1200px;
+    border-bottom:1px solid #ccc;
+    color:#4385f5;
+    .headerBox{
+        width:1200px;
+        margin:0 auto;
+        min-width:1200px;
+        height:80px;
+        line-height:80px;
+        .logoBox{
+            display:inline-block;
+            padding:0 20px;
+            font-size:30px;
+            font-weight:600;
+            height:100%;
+        }
+        .enterTips{
+            display:inline-block;
+            height:100%;
+            line-height:inherit;
+            float:right;
+        }
+    }            
+}
+
+.mainContainer{
+    width:100%;
+    min-width:1200px;
+    border-bottom:1px solid #ccc;
+    .mainBox{
+        width:1200px;
+        height:550px;
+        margin:0 auto;
+        overflow:hidden;
+        .loginPic,.registerPic{
+            width:50%;
+            height:inherit;                
+            float:left;
+        }
+        .loginPic{
+            background:center url('../imgs/login_pic.jpg') no-repeat;
+        }
+        .registerPic{
+            background:center url('../imgs/zhuce_pic.jpg') no-repeat;
+        }
+        .logContainer{
+            width:50%;
+            height:inherit;
+            margin-left:50%;
+            .logBox{
+                width:95%;
+                height:auto;
+                margin-left:20px;
+                .logTitle{
+                    height:40px;
+                    line-height:40px;
+                    .leftTips{
+                        font-weight:600;
+                    }
+                    .pageSkip{
+                        margin-right:35%;
+                        float:right;
+                        a{
+                            display:inline;
+                            color:#4385f5;
+                        }
+                    }
+                }
+                .loginDiv{
+                    display:inline-block;
+                    width:65%;
+                    margin:10px 0;
+                }
+                .loginInput,.registerInput{
+                    width:100%;
+                    height:40px;
+                    line-height:40px;
+                    box-sizing:border-box;
+                    outline:none;
+                    border:1px solid #ccc;
+                    color:#969696;
+                    &:focus{
+                        border:1px solid #969696;
+                    }
+                }
+                .inputDiv{
+                    display:inline-block;
+                    width:65%;
+                    margin:5px 0 20px;
+                    .inputTips{
+                        text-align:right;
+                        display:inline-block;
+                        width:20%;
+                        line-height:40px;
+                        font-size:14px;
+                    }
+                    .inputBox{
+                        display:inline-block;
+                        width:80%;
+                        float:right;
+                        .registerInput{
+                            width:100%;
+                        }
+                    }
+                    .securityCode{
+                        display:inline-block;
+                        width:45%;
+                    }
+                    .codePic{
+                        display:inline-block;
+                        width:105px;
+                        height:40px;
+                        vertical-align:top;
+                        margin-left:10px;
+                        border:1px solid #ccc;
+                        box-sizing:border-box;
+                    }
+                    .changeCode{
+                        display:inline-block;
+                        width:15%;
+                        height:40px;
+                        line-height:40px;
+                        text-align:center;
+                        vertical-align:top;
+                        margin-left:10px;
+                        font-size:12px;
+                        color:#4385f5;
+                    }
+                    .sureCode{
+                        display:inline-block;
+                        padding:0 8px;
+                        line-height:40px;
+                        background-color:#4385f5;
+                        color:#fff;
+                        font-size:14px;
+                        margin-left:2px;
+                        cursor:pointer;
+                        &:active{
+                            opacity:0.8;
+                            filter: alpha(opacity=80);
+                        }
+                    }
+                }
+                .errorMsg{
+                    display:inline-block;
+                    width:28%;
+                    height:40px;
+                    line-height:40px;
+                    margin-left:2px;
+                    color:#f00;
+                    vertical-align:middle;
+                }
+                .logAuto{
+                    width:100%;
+                    height:40px;
+                    line-height:40px;
+                    margin-top:-15px;
+                    input[type="checkbox"]{
+                        width:15px;
+                        height:15px;
+                        vertical-align:sub;
+                        outline:none;
+                        border:none;
+                    }
+                    .forgetPsd{
+                        margin-right:35%;
+                        float:right;                            
+                    }
+                }
+                .logBtn{
+                    width:65%;
+                    height:45px;
+                    line-height:45px;
+                    text-align:center;
+                    background-color:#4385f5;
+                    border-radius:5px;
+                    color:#fff;
+                    margin-top:35px;
+                    cursor:pointer;
+                    &:active{
+                        opacity:0.8;
+                        filter: alpha(opacity=80);
+                    }
+                }
+            }
+        }
+    }
+}

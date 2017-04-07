@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../statics/imgs/user.jpg'>
+    <!--    bootstrap css文件引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap/bootstrap.min.css">
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../statics/css/base.css">    
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../statics/css/log.css">
+</head>
+<body>
+    <div class="headerContainer">
+        <div class="headerBox">
+            <span class="logoBox">项目管理平台</span>
+            <span class="enterTips">你好!欢迎来到项目管理平台</span>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="mainBox">
+            <div class="loginPic"></div>
+            <div class="logContainer" style="margin-top:100px">
+                <div class="logBox">
+                    <div class="logTitle">
+                        <span class="leftTips">用户登录</span>
+                        <span class="pageSkip">
+                            <a href="./register.html">注册新账号</a>
+                        </span>
+                    </div>
+                    <form id="loginForm" action="javascript:void(0);">
+                        <div class="loginDiv">
+                            <input name="userName" type="text" class="loginInput" placeholder="请输入用户名">
+                        </div>                    
+                        <div class="errorMsg hide">不能为空</div>
+                        <div class="loginDiv">                        
+                            <input name="passWord" type="password" class="loginInput" placeholder="请输入密码">
+                        </div>
+                        <div class="errorMsg hide">不能为空</div>
+                        <div class="inputDiv">
+                            <span class="securityCode">
+                                <input name="codeNo" type="text" class="registerInput" placeholder="请输入验证码">
+                            </span>
+                            <span class="codePic"></span>
+                            <span class="changeCode">
+                                <a href="javascript:void(0);">换一张</a>
+                            </span>
+                        </div>
+                        <div class="errorMsg hide">不能为空</div>
+                    </form>
+                    <div class="logAuto">
+                        <input type="checkbox" id="autoLogin">
+                        <label for="autoLogin">自动登录</label>
+                        <span class="forgetPsd">
+                            <a href="javascript:void(0);">忘记密码？</a>
+                        </span>
+                    </div>
+                    <div class="logBtn" data-btn="login">登录</div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!--    jQ库文件引入-->
+    <script src="../statics/libs/jquery/jquery.min.js"></script>
+    <!--    表单验证js文件引入-->
+    <script src="../statics/libs/validate/jquery.validate.min.js"></script>
+    <!--    页面单独js文件引入-->
+    <script src="../statics/js/log.js"></script>
+</body>
+</html>

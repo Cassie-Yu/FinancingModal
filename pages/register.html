@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目管理平台</title>
+    <!--    设置标签页小图标-->
+    <link rel='shortcut icon' href='../statics/imgs/user.jpg'>
+    <!--    bootstrap css文件引入-->
+    <link rel="stylesheet" href="../statics/libs/bootstrap/bootstrap.min.css">
+    <!--    页面基本css文件引入-->
+    <link rel="stylesheet" href="../statics/css/base.css">    
+    <!--    页面单独css文件引入-->
+    <link rel="stylesheet" href="../statics/css/log.css">
+</head>
+<body>
+    <div class="headerContainer">
+        <div class="headerBox">
+            <span class="logoBox">项目管理平台</span>
+            <span class="enterTips">你好!欢迎来到项目管理平台</span>
+        </div>
+    </div>
+    <div class="mainContainer">
+        <div class="mainBox">
+            <div class="registerPic"></div>
+            <div class="logContainer" style="margin-top:80px">
+                <div class="logBox">
+                    <div class="logTitle">
+                        <span class="leftTips">用户注册</span>
+                        <span class="pageSkip">
+                            已有账号，<a href="./login.html">立即登录</a>
+                        </span>
+                    </div>
+                    <form id="registerForm" action="javascript:void(0);">
+                        <div class="inputDiv">
+                            <span class="inputTips">手机号：</span>
+                            <span class="inputBox">
+                                <input name="userName" type="text" class="registerInput" placeholder="手机号码">
+                            </span>
+                        </div>
+                        <div class="errorMsg hide"></div>
+                        <div class="inputDiv">
+                            <span class="inputTips">设置密码：</span>
+                            <span class="inputBox">
+                                <input id="firstPsd" name="firstPsd" type="password" class="registerInput" placeholder="至少六位(不能包含特殊字符)">
+                            </span>
+                        </div>
+                        <div class="errorMsg hide"></div>
+                        <div class="inputDiv">
+                            <span class="inputTips">确认密码：</span>
+                            <span class="inputBox">
+                                <input name="againPsd" type="password" class="registerInput" placeholder="再次输入密码">
+                            </span>
+                        </div>
+                        <div class="errorMsg hide"></div>
+                        <div class="inputDiv">
+                            <span class="inputTips">验证码：</span>
+                            <span class="securityCode">
+                                <input name="sureNo" type="text" class="registerInput" placeholder="输入验证码">
+                            </span>
+                            <span class="sureCode">发送手机验证码</span>
+                        </div>
+                        <div class="errorMsg hide"></div>
+                        <div class="logBtn" data-btn="register">立即注册</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <!--    jQ库文件引入-->
+    <script src="../statics/libs/jquery/jquery.min.js"></script>
+    <!--    表单验证js文件引入-->
+    <script src="../statics/libs/validate/jquery.validate.min.js"></script>
+    <!--    页面单独js文件引入-->
+    <script src="../statics/js/log.js"></script>
+</body>
+</html>

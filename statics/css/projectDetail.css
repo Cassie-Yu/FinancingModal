@@ -13,6 +13,7 @@
 .itemBox .addressPic {
   width: 530px;
   height: 305px;
+  margin: 0 auto;
 }
 .itemBox .proAddress {
   width: 610px;
